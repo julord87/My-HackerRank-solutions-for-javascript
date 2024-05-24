@@ -1,6 +1,6 @@
 function timeConversion(s) {
     const AMPM = s.substring(8, 10);
-    const hour = s.substring(0, 2)
+    const hour = s.substring(0, 2);
     let newHour = "";
     const time = s.substring(2, 8);
     
@@ -13,5 +13,5 @@ function timeConversion(s) {
         newHour = hour;
     }
     
-    return (newHour + time)
+    return (newHour + time);
 }
