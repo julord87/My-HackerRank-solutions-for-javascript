@@ -27,3 +27,36 @@ function dynamicArray(N, queries) {
   
     return ans;
   };
+
+  // Re visited
+
+  function dynamicArray(n, queries) {
+    let arr = []
+    let lastAnswer = 0
+    let ans = []
+    
+    for(let i = 0; i < n; i++) {
+        arr[i] = []
+    }
+    
+    queries.forEach((eachItem) => {
+        const [q, x, y] = [...eachItem]
+        let idx = (x ^ lastAnswer) % n
+        switch(q) {
+            case 1:
+                arr[idx].push(y);
+                break;
+            case 2:
+                let size = arr[idx].length;
+                let i = y % size;
+                lastAnswer = arr[idx][i];
+                ans.push(lastAnswer)
+                break;
+            default:
+                break;
+        }
+    })
+    
+    return ans;
+
+}
