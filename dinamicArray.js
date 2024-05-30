@@ -26,4 +26,4 @@ function dynamicArray(N, queries) {
     });
   
     return ans;
-  }
+  };
