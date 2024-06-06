@@ -10,4 +10,4 @@ function pangrams(s) {
     }
 
     return alphabetSet.size === 26 ? "pangram" : "not pangram";
-}
+};
