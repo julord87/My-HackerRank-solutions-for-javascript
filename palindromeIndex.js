@@ -21,4 +21,4 @@ function palindromeIndex(s) {
         }
     }
     return -1;
-}
+};
