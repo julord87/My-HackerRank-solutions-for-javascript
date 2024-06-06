@@ -21,4 +21,4 @@ function anagram(s) {
     }
     
     return changesNeeded;
-}
+};
