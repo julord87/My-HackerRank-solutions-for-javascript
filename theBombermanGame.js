@@ -42,30 +42,31 @@ function bomberMan(n, grid) {
   // Option 2
 
   function bomberMan(n, grid) {
-    if (n === 1) return grid;
-    if (n % 2 === 0) return grid.map(row => 'O'.repeat(row.length));
-
+    if(n === 1) return grid
+    
+    if(n % 2 === 0) return grid.map(row => 'O'.repeat(row.length));
+    
     const detonate = (grid) => {
-        const m = grid.length;
-        const n = grid[0].length;
-        const newGrid = Array.from(Array(m), () => Array(n).fill('O'));
-
-        for (let i = 0; i < m; i++) {
-            for (let j = 0; j < n; j++) {
-                if (grid[i][j] === 'O') {
+        const n = grid.length
+        const m = grid[0].length
+        const newGrid = Array.from(Array(n), () => Array(n).fill('O'))
+        
+        for(let i = 0; i < n; i++) {
+            for(let j = 0; j < m; j++) {
+                if(grid[i][j] === 'O') {
                     newGrid[i][j] = '.';
-                    if (i > 0) newGrid[i - 1][j] = '.';
-                    if (i < m - 1) newGrid[i + 1][j] = '.';
-                    if (j > 0) newGrid[i][j - 1] = '.';
-                    if (j < n - 1) newGrid[i][j + 1] = '.';
+                    if(i > 0) newGrid[i - 1][j] = '.';
+                    if(i < n - 1) newGrid[i + 1][j] = '.';
+                    if(j > 0) newGrid[i][j - 1] = '.';
+                    if(j < m - 1) newGrid[i][j + 1] = '.';
                 }
             }
         }
-        return newGrid.map(row => row.join(''));
-    };
-
-    const stateAt3 = detonate(grid.map(row => row.split('')));
-    const stateAt5 = detonate(stateAt3.map(row => row.split('')));
-
-    return ((n - 1) % 4 === 0) ? stateAt5 : stateAt3;
-}
+        return newGrid.map(row => row.join(''))
+    }
+    
+    const state3 = detonate(grid)
+    const state5 = detonate(state3)
+    
+    return ((n - 1) % 4 === 0) ? state5 : state3
+ }
