@@ -20,3 +20,25 @@ const lowerBound = (arr, target) => {
 
     return left;
 };
+
+// Option 2
+
+function climbingLeaderboard(ranked, player) {
+    const rankSet = Array.from(new Set(ranked));
+    let result = [];
+    let j = rankSet.length - 1; // Empezamos desde el final del rankSet
+    
+    for (let i = 0; i < player.length; i++) {
+        let score = player[i];
+        
+        // Mover hacia atrás en rankSet mientras el score del jugador sea mayor o igual al score en rankSet
+        while (j >= 0 && score >= rankSet[j]) {
+            j--;
+        }
+        
+        // La posición es j+2 ya que j+1 sería el índice de inserción y queremos el rank, que es 1 basado
+        result.push(j + 2);
+    }
+    
+    return result;
+}
