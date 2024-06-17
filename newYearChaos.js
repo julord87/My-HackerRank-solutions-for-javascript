@@ -1,13 +1,21 @@
 function minimumBribes(q) {
-    let bribes = 0;
-    for (let i = q.length - 1; i >= 0; i--) {
-        if (q[i] - (i + 1) > 2) {
-            console.log('Too chaotic');
-            return;
-        }
-        for (let j = Math.max(0, q[i] - 2); j < i; j++) {
-            if (q[j] > q[i]) bribes++;
+    let bribesCount = 0;
+
+    // Recorremos la fila de personas
+    for (let i = 0; i < q.length; i++) {
+        const n = q[i]; // La posición actual en la fila
+
+        // Verificamos si la persona en la posición actual sobrepasó el límite permitido de sobornos
+        if (n > i + 3) {
+            return "Too chaotic";        }
+
+        // Verificamos cuántas personas más adelante en la fila sobornaron a la persona actual
+        for (let j = Math.max(0, n - 2); j < i; j++) {
+            if (q[j] > n) {
+                bribesCount++;
+            }
         }
     }
-    console.log(bribes);
+
+    return bribesCount;
 }
