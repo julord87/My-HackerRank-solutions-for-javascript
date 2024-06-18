@@ -1,15 +1,14 @@
 // reverse linked list (devolviendo una linked list (data estructure) en reversa)
 
 function reverse(llist) {
-    let next = null;
-    let current = llist;
     let prev = null;
+    let current = llist;
     
     while(current) {
-        next = current.next;
+        let temp = current.next;
         current.next = prev;
-        prev = current
-        current = next
+        prev = current;
+        current = temp;
     }
     return prev;
 }
