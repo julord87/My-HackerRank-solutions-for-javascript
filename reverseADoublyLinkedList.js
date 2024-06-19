@@ -5,12 +5,13 @@ function reverse(llist) {
     let current = llist;
     let next = null;
     
-    while (current) {
+    while(current) {
         next = current.next;
-        current.next = prev;
         current.prev = next;
+        current.next = prev;
         prev = current;
-        current = next;     
+        current = next;
     }
+    
     return prev;
 }
