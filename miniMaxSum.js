@@ -10,4 +10,4 @@ function miniMaxSum(arr) {
     }
     
     console.log((sum - max), (sum - min))
-}
+};
