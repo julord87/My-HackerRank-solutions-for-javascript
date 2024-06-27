@@ -13,4 +13,4 @@ function matchingStrings(strings, queries) {
     }
     
     return result;
-}
+};
