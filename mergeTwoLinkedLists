@@ -17,3 +17,21 @@ function mergeLists(head1, head2) {
         return head2;
     }
 };
+
+// Option 2
+
+function mergeLists(head1, head2) {
+    let llist = new SinglyLinkedList();
+
+    while(head1) {
+        while(head2 && head2.data <= head1.data) {
+            llist.insertNode(head2.data);
+            head2 = head2.next;
+        }
+
+        llist.insertNode(head1.data);
+        head1 = head1.next;
+    }  
+
+    return llist;
+}
