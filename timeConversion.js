@@ -14,4 +14,4 @@ function timeConversion(s) {
     }
     
     return (newHour + time);
-}
+};
