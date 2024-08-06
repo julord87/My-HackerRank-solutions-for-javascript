@@ -16,4 +16,4 @@ function diagonalDifference(arr) {
     } else {
         return secDiag - firstDiag
     }
-}
+};
