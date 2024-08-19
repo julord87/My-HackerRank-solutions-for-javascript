@@ -37,7 +37,7 @@ function bomberMan(n, grid) {
         }
       }, '')
     }
-  }
+  };
 
   // Option 2
 
