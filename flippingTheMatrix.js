@@ -14,4 +14,4 @@ function flippingMatrix(matrix) {
     }
     
     return maxSum;
-}
+};
