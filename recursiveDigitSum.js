@@ -12,4 +12,4 @@ function superDigit(n, k) {
     } else {
         return superDigit(String(sum), 1);
     }
-}
+};
