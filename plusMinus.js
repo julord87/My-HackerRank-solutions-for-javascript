@@ -15,4 +15,4 @@ function plusMinus(arr) {
     console.log((pos / arr.length).toFixed(6))
     console.log((neg / arr.length).toFixed(6))
     console.log((zero / arr.length).toFixed(6))
-}
+};
