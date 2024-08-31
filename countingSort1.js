@@ -10,4 +10,4 @@ function countingSort(arr) {
     }
     
     return res;
-}
+};
