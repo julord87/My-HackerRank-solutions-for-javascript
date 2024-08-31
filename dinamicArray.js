@@ -1,4 +1,4 @@
-function dynamicArray(N, queries) {
+unfunction dynamicArray(N, queries) {
     const S = [];
     let lastAnswer = 0;
     const ans = [];
@@ -59,4 +59,4 @@ function dynamicArray(N, queries) {
     
     return ans;
 
-}
+};
