@@ -1,5 +1,5 @@
 function bomberMan(n, grid) {
-    if (n === 1) return grid
+    if (n === 1) return grid;
   
     let g = plantbombs(grid)
   
