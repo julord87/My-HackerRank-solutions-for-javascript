@@ -14,4 +14,4 @@ function maxMin(k, arr) {
     
     return minUnfairness;
 
-}
+};
