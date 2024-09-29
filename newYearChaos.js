@@ -18,4 +18,4 @@ function minimumBribes(q) {
     }
 
     return bribesCount;
-}
+};
