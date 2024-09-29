@@ -55,7 +55,7 @@ unfunction dynamicArray(N, queries) {
             default:
                 break;
         }
-    })
+    });
     
     return ans;
 
