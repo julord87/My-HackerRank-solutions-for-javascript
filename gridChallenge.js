@@ -11,7 +11,7 @@ function gridChallenge(grid) {
         }
     }
     return "YES";
-}
+};
 
 
 // Option 2
