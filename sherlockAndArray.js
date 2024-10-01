@@ -11,7 +11,7 @@ function balancedSums(arr) {
         leftSum += arr[i];
     };
     return 'NO';
-}
+};
 
 
 // less efficient solution:
