@@ -7,4 +7,4 @@ function twoArrays(k, A, B) {
     }
     
     return "YES"
-}
+};
