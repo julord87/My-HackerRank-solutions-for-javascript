@@ -24,7 +24,7 @@ function caesarCipher(s, k) {
     }
     
         return rotatedString;
-};
+}
 
 
 
