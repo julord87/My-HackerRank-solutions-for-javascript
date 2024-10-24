@@ -69,4 +69,4 @@ function bomberMan(n, grid) {
     const state5 = detonate(state3)
     
     return ((n - 1) % 4 === 0) ? state5 : state3
- };
+ }
