@@ -15,4 +15,4 @@ function counterGame(n) {
     }
 
     return turn % 2 === 0 ? "Richard" : "Louise";
-};
+}
